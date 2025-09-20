@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito de Compras - RIKOSEX</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header igual al index -->
+  <header class="navegacion">
+      <div class="logo">
+          <a href="index.html">RIKOSEX</a>
+      </div>
+
+      <nav>
+          <ul>
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="#">Productos</a></li>
+              <li><a href="#">Contacto</a></li>
+          </ul>
+      </nav>
+
+      <div class="carrito">
+          <a href="carro.html" class="btn-carrito">
+              <img src="img/carro-de-la-compra.png" alt="Carrito de compras">
+              <span class="carrito-count" id="carrito-count">0</span>
+          </a>
+      </div>
+  </header>
+
+  <!-- Contenido del carrito -->
+  <main style="margin-top:140px; text-align:center;">
+      <h1>🛒 Tu Carrito</h1>
+      <div id="carrito-lista"></div>
+      <h2>Total: $<span id="carrito-total">0</span></h2>
+  </main>
+
+  <footer>
+      <p>&copy; 2025 RIKOSEX - Todos los derechos reservados.</p>
+      <p>HECHO POR CHAVERRITA 🔥</p>
+  </footer>
+
+  <script src="main.js"></script>
+  <script>
+    // Script para mostrar carrito en carro.html
+    const listaCarrito = document.getElementById("carrito-lista");
+    const totalCarrito = document.getElementById("carrito-total");
+
+    function renderCarrito() {
+        listaCarrito.innerHTML = "";
+
+        if (carrito.length === 0) {
+            listaCarrito.innerHTML = "<p>Tu carrito está vacío 🛍️</p>";
+            totalCarrito.textContent = "0";
+            return;
+        }
+
+        let total = 0;
+
+        carrito.forEach((producto, index) => {
+            total += producto.precio;
+
+            const item = document.createElement("div");
+            item.classList.add("item-carrito");
+            item.innerHTML = `
+                <p><strong>${producto.nombre}</strong> - $${producto.precio}</p>
+                <button class="btn-eliminar" data-index="${index}">❌ Eliminar</button>
+            `;
+            listaCarrito.appendChild(item);
+        });
+
+        totalCarrito.textContent = total;
+
+        // Botones eliminar
+        document.querySelectorAll(".btn-eliminar").forEach(btn => {
+            btn.addEventListener("click", (e) => {
+                const index = e.target.getAttribute("data-index");
+                carrito.splice(index, 1);
+                guardarCarrito();
+                actualizarContador();
+                renderCarrito();
+            });
+        });
+    }
+
+    renderCarrito();
+  </script>
+</body>
+</html>
