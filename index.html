@@ -2,14 +2,17 @@
 <html lang="es">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEX-SHOP - RIKOSEX</title>
     <link rel="stylesheet" href="style.css">
-    <title>SEX-SHOP</title>
+
 </head>
 
 <body>
 
+    <!--  INICIO HEADER -->
     <header class="navegacion">
         <div class="logo">
             <a href="index.html">RIKOSEX</a>
@@ -17,81 +20,123 @@
 
         <nav>
             <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Producto</a></li>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#">Productos</a></li>
                 <li><a href="#">Contacto</a></li>
             </ul>
         </nav>
 
+        <!-- Carrito -->
         <div class="carrito">
-            <a href="#" class="btn-carrito">
-                <img src="img/carrrro.jpg" alt="Carrito de compras">
+            <a href="carro.html" class="btn-carrito">
+                <img src="img/carro-de-la-compra.png" alt="Carrito de compras">
+                <span class="carrito-count" id="carrito-count">0</span>
             </a>
         </div>
     </header>
+    <!--  FIN HEADER -->
 
-    <!-- Contenido principal -->
+    <!--  INICIO MAIN -->
     <main>
         <section>
             <div class="titulo">
-                <h1>SEX-SHOP</h1>
-                <p>El mejor sitio para comprar productos sexuales</p>
+                <h1>RIKOSEX</h1>
+                <p>
+                    Rikosex es tu tienda online de confianza para vivir noches llenas de pasión.
+                    Encuentra los juguetes y accesorios más excitantes, con precios irresistibles
+                    y la calidad que necesitas para llevar el placer al siguiente nivel.
+                </p>
             </div>
         </section>
 
+        <!--  PRODUCTOS -->
         <div class="contenedor-cajas">
-            <div class="box caja-1">
-                <h2> Vibradores </h2>
-                <img src="img/vibrador.jpg" alt="imagen de un vibrador">
+
+            <!-- Producto 1 -->
+            <div class="box">
+                <h2>Vibradores</h2>
+                <img src="img/vibrador.jpg" alt="Vibrador">
                 <p class="precio">Precio $70.000</p>
-                <a href="#" class="btn-comprar">Comprar</a>
+                <a href="#" class="btn-comprar" data-nombre="Vibrador" data-precio="70000">Comprar</a>
             </div>
 
-            <div class="box caja-2">
+            <!-- Producto 2 -->
+            <div class="box">
                 <h2>Lubricantes</h2>
                 <img src="img/lubricante.png" alt="Lubricante">
                 <p class="precio">Precio $40.000</p>
-                <a href="#" class="btn-comprar">Comprar</a>
+                <a href="#" class="btn-comprar" data-nombre="Lubricante" data-precio="40000">Comprar</a>
             </div>
 
-            <div class="box caja-3">
+            <!-- Producto 3 -->
+            <div class="box">
                 <h2>Lencería</h2>
-                <img src="img/lenceria.jpeg" alt="lenceria">
+                <img src="img/lenceria.jpeg" alt="Lencería">
                 <p class="precio">Precio $85.000</p>
-                <a href="#" class="btn-comprar">Comprar</a>
+                <a href="#" class="btn-comprar" data-nombre="Lencería" data-precio="85000">Comprar</a>
             </div>
 
-            <div class="box caja-4">
-                <h2> Dildos </h2>
+            <!-- Producto 4 -->
+            <div class="box">
+                <h2>Dildos</h2>
                 <img src="img/dildoss.webp" alt="Dildo">
                 <p class="precio">Precio $150.000</p>
-                <a href="#" class="btn-comprar">Comprar</a>
+                <a href="#" class="btn-comprar" data-nombre="Dildo" data-precio="150000">Comprar</a>
             </div>
 
-            <div class="box caja-5">
-                <h2> Sadomasoquismo </h2>
-                <img src="img/sadomasoquismo.jpeg" alt="sadomasoquismo">
+            <!-- Producto 5 -->
+            <div class="box">
+                <h2>Sadomasoquismo</h2>
+                <img src="img/sadomasoquismo.jpeg" alt="Sadomasoquismo">
                 <p class="precio">Precio $100.000</p>
-                <a href="#" class="btn-comprar">Comprar</a>
+                <a href="#" class="btn-comprar" data-nombre="Sadomasoquismo" data-precio="100000">Comprar</a>
             </div>
 
-            <div class="box caja-6">
-                <h2> Juguetes para hombres </h2>
-                <img src="img/juguetehombre.jpg" alt="juguete hombres">
+            <!-- Producto 6 -->
+            <div class="box">
+                <h2>Juguetes para hombres</h2>
+                <img src="img/juguete hombre.webp" alt="Juguetes hombres">
                 <p class="precio">Precio $200.000</p>
-                <a href="#" class="btn-comprar">Comprar</a>
+                <a href="#" class="btn-comprar" data-nombre="Juguetes para hombres" data-precio="200000">Comprar</a>
             </div>
+
+            <!-- Producto 7 -->
+            <div class="box">
+                <h2>Vitafer</h2>
+                <img src="img/vitafer.jpg" alt="Vitafer">
+                <p class="precio">Precio $75.000</p>
+                <a href="#" class="btn-comprar" data-nombre="Vitafer" data-precio="75000">Comprar</a>
+            </div>
+
+            <!-- Producto 8 -->
+            <div class="box">
+                <h2>Meromacho</h2>
+                <img src="img/meromacho.jpg" alt="Meromacho">
+                <p class="precio">Precio $60.000</p>
+                <a href="#" class="btn-comprar" data-nombre="Meromacho" data-precio="60000">Comprar</a>
+            </div>
+
+            <!-- Producto 9 -->
+            <div class="box">
+                <h2>Condones</h2>
+                <img src="img/condones.webp" alt="Condones">
+                <p class="precio">Precio $30.000</p>
+                <a href="#" class="btn-comprar" data-nombre="Condones" data-precio="30000">Comprar</a>
+            </div>
+
         </div>
     </main>
+    <!--  FIN MAIN -->
 
+    <!--  INICIO FOOTER -->
     <footer>
         <p>&copy; 2025 RIKOSEX - Todos los derechos reservados.</p>
+        <p>HECHO POR CHAVERRITA 🔥</p>
         <p><a href="#">Política de privacidad</a> | <a href="#">Términos y condiciones</a></p>
     </footer>
+    <!--  FIN FOOTER -->
 
     <script src="main.js"></script>
 </body>
 
 </html>
-
-<!-- // revisar modificaciones $ git push -u Chaverrita -->
