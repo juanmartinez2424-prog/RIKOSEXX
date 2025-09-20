@@ -28,7 +28,7 @@ botonesComprar.forEach(boton => {
         const precio = parseInt(boton.dataset.precio);
 
         if (!nombre || isNaN(precio)) {
-            console.warn("⚠️ Producto inválido, revisa data-nombre y data-precio");
+            console.warn(" Producto inválido, revisa data-nombre y data-precio");
             return;
         }
 
